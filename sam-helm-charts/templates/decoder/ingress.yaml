@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - decoder.{{ .Values.domain }}
+    - k8s-decoder.{{ .Values.domain }}
     secretName: {{ .Release.Name }}-decoder-secret
   rules:
-  - host: decoder.{{ .Values.domain }}
+  - host: k8s-decoder.{{ .Values.domain }}
     http:
       paths:
       - path: /
